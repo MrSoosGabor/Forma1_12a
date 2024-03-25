@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using Forma1.ViewModel.Helper;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -19,6 +20,7 @@ namespace Forma1
         public MainWindow()
         {
             InitializeComponent();
+            var result = SqlData.VSelect();
         }
     }
 }
