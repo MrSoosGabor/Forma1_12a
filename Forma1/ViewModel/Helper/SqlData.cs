@@ -32,7 +32,7 @@ namespace Forma1.ViewModel.Helper
         {
             List<Versenyző> versenyzők = new();
             con.Open();
-            string sql = "SELECT v.ID, v.név, v.nemzet, v.születés, v.magasság, c.csapatnév " + 
+            string sql = "SELECT v.ID, v.név, v.nemzet, v.születés, v.magasság, v.csapatID, c.csapatnév " + 
                 "FROM versenyzők v INNER JOIN csapatok c ON v.csapatID = c.ID " + 
                 "WHERE c.csapatnév LIKE CONCAT('%','Ferrari') AND v.név LIKE CONCAT('%','e','%');";
             MySqlCommand cmd = new MySqlCommand(sql, con);
