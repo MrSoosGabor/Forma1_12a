@@ -1,4 +1,5 @@
-﻿using Forma1.ViewModel.Helper;
+﻿using Forma1.Model;
+using Forma1.ViewModel.Helper;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -20,7 +21,9 @@ namespace Forma1
         public MainWindow()
         {
             InitializeComponent();
-            var result = SqlData.VSelect();
+            var result = SqlData.VSelect("", "");
+            result[3].Nemzet = "szerb-horváth";
+            SqlData.Update(result[3]);
         }
     }
 }

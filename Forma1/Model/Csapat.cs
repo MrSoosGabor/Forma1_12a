@@ -15,6 +15,7 @@ namespace Forma1.Model
         public string Nemzet { get; set; }
 
         public Csapat() { 
+            Csapatnév = string.Empty;
         }
         public Csapat(MySqlDataReader reader)
         {
